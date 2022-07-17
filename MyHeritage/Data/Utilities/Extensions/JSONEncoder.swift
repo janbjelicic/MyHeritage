@@ -6,5 +6,5 @@ extension JSONEncoder {
         let data = try encode(value)
         return try JSONSerialization.jsonObject(with: data, options: opt)
     }
-    
+
 }

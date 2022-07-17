@@ -516,6 +516,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8088839E287B2055001B6AC9 /* Build configuration list for PBXNativeTarget "MyHeritage" */;
 			buildPhases = (
+				8088846C28849CA4001B6AC9 /* Run Swiftlint */,
 				80888370287B2052001B6AC9 /* Sources */,
 				80888371287B2052001B6AC9 /* Frameworks */,
 				80888372287B2052001B6AC9 /* Resources */,
@@ -646,6 +647,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8088846C28849CA4001B6AC9 /* Run Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint lint --strict\nelse\n    echo \"warning: SwiftLint not installed. Use: brew install swiftlint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		80888370287B2052001B6AC9 /* Sources */ = {
